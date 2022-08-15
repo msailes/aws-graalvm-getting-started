@@ -5,7 +5,7 @@ This repository is meant to help developers to create and migration Java applica
 ## Contents
 * [Overview of GraalVM native-image](#overview-of-graalvm-native-image)
 * [Advantages of using GraalVM native-image with AWS Lambda](#advantages-of-using-graalvm-native-image-with-aws-lambda)
-* [GraalVM limitations](graalvm-limitations)
+* [GraalVM native-image Limitations](#graalvm-native-image-limitations)
 * Migrating an existing application
 * Greenfield applications
   * No framework
