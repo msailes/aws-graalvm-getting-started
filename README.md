@@ -54,8 +54,17 @@ reflect-config.json
 ]
 ```
 
-### Increased Build Time
+### Increased Build Complexity
 
+The ahead-of-time compilation done native-image tool is much more resource intensive than that done by the JVM. Builds take longer and require more memory. The resultant binary executable is also platform specific.
+
+For example:
+
+Project xxx using GraalVM 22.1.0
+
+| Project                                                                           | JVM (Java 17) | AOT (GraalVM 22.1.0) |
+|-----------------------------------------------------------------------------------|---------------|----------------------|
+| [graalvm-serverless-demo](https://github.com/aws-samples/serverless-graalvm-demo) | xxs           | xxxs                 |
 
 
 ## GraalVM Dependency Considerations
