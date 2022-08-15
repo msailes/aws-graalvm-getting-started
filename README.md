@@ -4,7 +4,7 @@ This repository is meant to help developers to create and migration Java applica
 
 ## Contents
 * [Overview of GraalVM native-image](#overview-of-graalvm-native-image)
-* [Advantages of using GraalVM native-image](#advantages-of-using-graalvm-native-image)
+* [Advantages of using GraalVM native-image with AWS Lambda](#advantages-of-using-graalvm-native-image-with-aws-lambda)
 * Migrating an existing application
 * Greenfield applications
   * No framework
@@ -32,11 +32,11 @@ With a GraalVM native executable, your Lambda function no longer needs a JVM in 
 
 ### AWS Dependencies
 
-| Name                   | Supported   | Information                                                                                                                                               |
-|:-----------------------|:------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AWS SDK for Java v2    | Supported   | GraalVM native-image has been supported since [v2.16.1](https://aws.amazon.com/blogs/developer/graalvm-native-image-support-in-the-aws-sdk-for-java-2-x/) |
-| AWS Lambda Java Libs   | Config only | Follow the [GitHub issue](https://github.com/aws/aws-lambda-java-libs/issues/272)                                                                         |
-| AWS X-Ray SDK for Java | Supported   | GraalVM native-image has been supported since v2.11.0                                                                                                     |
+| Name                   | Supported                         | Information                                                                                                                                               |
+|:-----------------------|:----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AWS SDK for Java v2    | :white_check_mark: Supported      | GraalVM native-image has been supported since [v2.16.1](https://aws.amazon.com/blogs/developer/graalvm-native-image-support-in-the-aws-sdk-for-java-2-x/) |
+| AWS Lambda Java Libs   | :page_facing_up: config available | Follow the [GitHub issue](https://github.com/aws/aws-lambda-java-libs/issues/272)                                                                         |
+| AWS X-Ray SDK for Java | :white_check_mark: Supported      | GraalVM native-image has been supported since v2.11.0                                                                                                     |
 
 ## Additional Training Resources
 
