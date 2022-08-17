@@ -56,11 +56,15 @@ reflect-config.json
 
 ### Increased Build Complexity
 
-The ahead-of-time compilation done native-image tool is much more resource intensive than that done by the JVM. Builds take longer and require more memory. The resultant binary executable is also platform specific.
+The ahead-of-time compilation done by the native-image tool is much more resource intensive than that done by the JVM. Builds take longer and require more memory. The resultant binary executable is also platform specific.
+
+Lambda supports two CPU architectures x86 and ARM. You must ensure that the product of your build process matches that of your target Lambda function. In the same way, the build must target the Linux operating system.
+
+If you are using a different OS or CPU architecture to your desired target then you can use [Docker](https://www.docker.com/) to produce a suitable build.
+
+TODO: error message example
 
 For example:
-
-Project xxx using GraalVM 22.1.0
 
 | Project                                                                           | JVM (Java 17) | AOT (GraalVM 22.1.0) |
 |-----------------------------------------------------------------------------------|---------------|----------------------|
@@ -69,13 +73,35 @@ Project xxx using GraalVM 22.1.0
 
 ## GraalVM Dependency Considerations
 
+External dependencies are often used to add additional capabilities to our application which might be lengthy or complex to write yourself. They can also give productivity boosts by simplifying processes. To do this, they often use the very functionality which is not supported in GraalVM native-image. For example the Jackson databind library uses reflection to serialise and deserialise objects to JSON. Serialising complex objects to JSON is a non-trivial operation, so it make sense to use a high quality external dependency. 
+
+Not all external dependencies currently support GraalVM native-image. When you use them in your application and compile them with native-image you can have runtime exceptions due to `ClassNotFoundExceptions`. This is the worst time to have errors surface, in the testing section, strategies for avoiding this will be covered. (TODO: Link)
+
+TODO: example error message
+
+Adoption of GraalVM native-image is increasing. The eco-systems largest framework, Spring has stated that [Spring Boot 3 and Spring Framework 6 will have built-in support](https://www.infoq.com/articles/native-java-spring-boot/) by the end of 2022.
+
+
+
+The following table is a list of common dependencies and information about what support they provide for GraalVM native-image.
+
 ### AWS Dependencies
 
-| Name                   | Supported                         | Information                                                                                                                                               |
-|:-----------------------|:----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AWS SDK for Java v2    | :white_check_mark: Supported      | GraalVM native-image has been supported since [v2.16.1](https://aws.amazon.com/blogs/developer/graalvm-native-image-support-in-the-aws-sdk-for-java-2-x/) |
-| AWS Lambda Java Libs   | :page_facing_up: Config available | Follow the [GitHub issue](https://github.com/aws/aws-lambda-java-libs/issues/272)                                                                         |
-| AWS X-Ray SDK for Java | :white_check_mark: Supported      | GraalVM native-image has been supported since v2.11.0                                                                                                     |
+| Name                   | Supported                         | Information                                                                                                                |
+|:-----------------------|:----------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| AWS SDK for Java v2    | :white_check_mark: Supported      | Supported from [v2.16.1](https://aws.amazon.com/blogs/developer/graalvm-native-image-support-in-the-aws-sdk-for-java-2-x/) |
+| AWS Lambda Java Libs   | :page_facing_up: Config available | Follow the [GitHub issue](https://github.com/aws/aws-lambda-java-libs/issues/272)                                          |
+| AWS X-Ray SDK for Java | :white_check_mark: Supported      | Supported from v2.11.0                                                                                                     |
+
+### 3rd Party Dependencies
+
+
+
+### GraalVM Reachability Metadata Repository 
+
+https://github.com/oracle/graalvm-reachability-metadata
+
+
 
 ## Additional Training Resources
 
