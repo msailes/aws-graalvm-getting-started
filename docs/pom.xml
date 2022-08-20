@@ -73,6 +73,8 @@
                         <configuration>
                             <docId>znai</docId>
                             <port>3334</port>
+                            <docId>graalvm-docs</docId>
+                            <deployRoot>/</deployRoot>
                         </configuration>
                     </plugin>
 
