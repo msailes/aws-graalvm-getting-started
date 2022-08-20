@@ -1,0 +1,19 @@
+<assembly>
+    <id>docs-export</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/znai-export</directory>
+            <outputDirectory/>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>.vertx/**</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+</assembly>
