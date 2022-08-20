@@ -70,10 +70,6 @@
                                 </configuration>
                             </execution>
                         </executions>
-                        <configuration>
-                            <docId>znai</docId>
-                            <port>3334</port>
-                        </configuration>
                     </plugin>
 
                     <plugin>
