@@ -73,7 +73,7 @@
                         <configuration>
                             <docId>znai</docId>
                             <port>3334</port>
-<!--                            <deployRoot>aws-graalvm-getting-started/</deployRoot>-->
+                            <deployRoot>/aws-graalvm-getting-started/static</deployRoot>
                         </configuration>
                     </plugin>
 
