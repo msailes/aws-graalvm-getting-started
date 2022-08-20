@@ -70,6 +70,9 @@
                                 </configuration>
                             </execution>
                         </executions>
+                        <configuration>
+                            <docId>znai</docId>
+                        </configuration>
                     </plugin>
 
                     <plugin>
