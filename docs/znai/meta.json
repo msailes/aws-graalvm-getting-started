@@ -1,8 +1,8 @@
 {
   "title": "AWS Lambda and GraalVM",
   "type": "Guide",
-  "viewOn": {
-    "link": "your-custom-base-url",
-    "title": "View On Label"
+  "support": {
+    "link": "https://github.com/aws-samples/serverless-graalvm-demo/issues",
+    "title": "Questions/Improvements"
   }
 }
