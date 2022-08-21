@@ -19,10 +19,10 @@ jobs:
           java-version: 1.8
 
       - name: Build
-        run: mvn -B package
+        run: mvn -B clean package
 
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/target/znai
+          publish_dir: ./docs/target/aws-graalvm-getting-started
