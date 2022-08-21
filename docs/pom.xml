@@ -71,7 +71,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <docId>znai</docId>
+                            <docId>aws-graalvm-getting-started</docId>
                         </configuration>
                     </plugin>
 
