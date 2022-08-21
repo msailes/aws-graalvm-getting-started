@@ -6,7 +6,7 @@ title: GraalVM on AWS Lambda
 
 GraalVM is a high-performance JDK designed for high performance and low memory utilization. GraalVM can run in two different modes. Firstly, on the HotSpot JVM with the Graal just-in-time (JIT) compiler. Secondly, and more interesting for this repository is the ahead-of-time (AOT) compiled native binaries.
 
-Using the GraalVM native-image tool you can compile Java bytecode into a self contained, platform specific binary file. This executable no longer requires the JVM to run. This and the ahead-of-time compilation mean that the application can start up much faster and consume less memory.
+Using the GraalVM native-image tool you can compile Java bytecode into a self-contained, platform specific binary file. This executable no longer requires the JVM to run. This and the ahead-of-time compilation mean that the application can start up much faster and consume less memory.
 
 # Advantages
 
@@ -27,19 +27,7 @@ To work around these limitations you create additional configuration files which
 For example, the Java class which implements the `RequestHandler` or `RequestStreamHandler` interface is loaded using reflection by the Lambda runtime. This would need to be configured using additional [build configuration](https://www.graalvm.org/22.0/reference-manual/native-image/BuildConfiguration/).
 
 reflect-config.json
-```json
-[
-  {
-    "name": "com.retail.UpdateOrderHandler",
-    "allDeclaredConstructors": true,
-    "allPublicConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true,
-    "allPublicClasses": true
-  }
-]
-```
+:include-file: software/products/src/main/resources/META-INF/native-image/reflect-config.json
 
 ## Increased Build Complexity
 
