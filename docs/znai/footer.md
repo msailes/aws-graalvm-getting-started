@@ -1,1 +1,1 @@
-Contributions are welcome
+[Contributions are welcome](https://github.com/msailes/aws-graalvm-getting-started)
