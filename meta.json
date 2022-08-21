@@ -4,7 +4,7 @@
     "title" : "View On Label"
   },
   "id" : "aws-graalvm-getting-started",
-  "title" : "Getting started with AWS Lambda and GraalVM",
+  "title" : "AWS Lambda and GraalVM",
   "type" : "Guide",
   "previewEnabled" : false
 }

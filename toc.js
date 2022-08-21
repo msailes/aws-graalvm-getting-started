@@ -3,7 +3,7 @@ toc = [ {
   "dirName" : "",
   "items" : [ {
     "chapterTitle" : "",
-    "pageTitle" : "Getting started with AWS Lambda and GraalVM",
+    "pageTitle" : "AWS Lambda and GraalVM",
     "pageMeta" : { },
     "dirName" : "",
     "fileName" : "index",
@@ -11,6 +11,26 @@ toc = [ {
     "pageSectionIdTitles" : [ {
       "title" : "Getting started with AWS Lambda and GraalVM",
       "id" : "getting-started-with-aws-lambda-and-graalvm"
+    } ]
+  } ]
+}, {
+  "chapterTitle" : "Getting Started",
+  "dirName" : "getting-started",
+  "items" : [ {
+    "chapterTitle" : "Getting Started",
+    "pageTitle" : "GraalVM on AWS Lambda",
+    "pageMeta" : {
+      "title" : [ "GraalVM on AWS Lambda" ]
+    },
+    "dirName" : "getting-started",
+    "fileName" : "summary",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Overview",
+      "id" : "overview"
+    }, {
+      "title" : "Advantages",
+      "id" : "advantages"
     } ]
   } ]
 }, {
