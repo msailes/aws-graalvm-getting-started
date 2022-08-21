@@ -1,8 +1,4 @@
-# Your product
+# Getting started with AWS Lambda and GraalVM
 
-quick summary
-
-Note: This is a summary page for your product. It is your landing page, but is not a part of your Table Of Contents.
-If you don't know what to put here use `:include-redirect: chapter-title/page-title` to automatically redirect to a page in your 
-Table Of Contents. 
+This repository is to help developers to create and migration Java applications to AWS Lambda using GraalVM native-image. It will cover multiple different frameworks and strategies to help you modernize your applications whatever situation you are in.
 
