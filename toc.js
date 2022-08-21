@@ -3,14 +3,14 @@ toc = [ {
   "dirName" : "",
   "items" : [ {
     "chapterTitle" : "",
-    "pageTitle" : "Your Product",
+    "pageTitle" : "Getting started with AWS Lambda and GraalVM",
     "pageMeta" : { },
     "dirName" : "",
     "fileName" : "index",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
-      "title" : "Your product",
-      "id" : "your-product"
+      "title" : "Getting started with AWS Lambda and GraalVM",
+      "id" : "getting-started-with-aws-lambda-and-graalvm"
     } ]
   } ]
 }, {
